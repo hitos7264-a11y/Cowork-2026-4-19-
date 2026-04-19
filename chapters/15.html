@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#07080c">
+<script>(function(){var k='cowork-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark')t='dark';document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f4f6fb':'#07080c');})();</script>
+<title>第15章 主要ソリューションの俯瞰 | Cowork 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a href="../index.html" class="back-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>目次</a>
+    <div class="topbar-logo"><div class="logo-mark">C</div></div>
+    <div class="topbar-right">
+      <button type="button" class="theme-toggle" aria-label="テーマを切り替え">
+        <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m13.66-13.66 1.41 1.41"/></svg>
+        <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <div class="topbar-meta"><span class="date">CH. 15</span></div>
+    </div>
+  </header>
+
+  <section class="article-hero theme-violet">
+    <div class="chapter-badge">CHAPTER 15 · LANDSCAPE</div>
+    <h1 class="article-title">主要ソリューションの<br><span style="background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">俯瞰</span></h1>
+    <div class="article-lead">
+      2026年4月現在のAIコワーク領域の主要プレイヤーを、文章で俯瞰しておきたい。
+    </div>
+  </section>
+
+  <article class="article-body">
+    <h2>先行する2大プレイヤー</h2>
+
+    <div class="callout">
+      <div class="callout-icon">C</div>
+      <div class="callout-body">
+        <strong>Anthropic Claude Cowork</strong>
+        カテゴリの震源地。macOS／Windows対応、Claude Codeの延長、VMベースの安全策、全有償プランでの一般提供、豊富なコネクター、部門別プラグイン、OpenTelemetry／RBAC／Analytics APIで先行。
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-icon">M</div>
+      <div class="callout-body">
+        <strong>Microsoft Copilot Cowork</strong>
+        M365エコシステムに深く埋め込まれ、Work IQによる組織コンテキストの自動取得、既存M365セキュリティの完全継承、Anthropic技術の統合によるモデル中立性。大企業の圧倒的な導入基盤を武器に。
+      </div>
+    </div>
+
+    <h2>日本発・特化型</h2>
+
+    <div class="callout pink">
+      <div class="callout-icon">¥</div>
+      <div class="callout-body">
+        <strong>マネーフォワード AI Cowork</strong>
+        日本のバックオフィス特化。オーケストレーター＋専門エージェント、MCP柔軟連携、ガードレール・Draft &amp; Approve・AI監査ログで日本企業のガバナンス要件に対応。「マネーフォワード クラウド」標準統合。
+      </div>
+    </div>
+
+    <h2>個人〜中小・プラットフォーム型</h2>
+
+    <div class="kv-list">
+      <div class="kv-row"><div class="k">Abacus</div><div class="v">OS非依存・マルチモデル自動ルーティング・サブエージェント並列・バンドル課金で低障壁</div></div>
+      <div class="kv-row"><div class="k">Coworker AI</div><div class="v">100+コネクター、エンタープライズ級コンプライアンス、「エージェントのOS」</div></div>
+      <div class="kv-row"><div class="k">CoWork.com</div><div class="v">複数プラットフォームを束ねる中立マーケットプレイス</div></div>
+    </div>
+
+    <h2>オープンソース</h2>
+
+    <p>Eigent／Kuse Cowork／OpenClawが、<strong>ベンダーロックインを避けたい組織や開発者</strong>にとって現実的な選択肢を提供する。</p>
+
+    <h2>違いを超えて、共通する思想</h2>
+
+    <div class="pull-quote">
+      違いは明確だが、共通する思想もまた明快である。
+    </div>
+
+    <p>すべての製品が、</p>
+
+    <ul class="bullet-list">
+      <li><strong>「プロンプト→応答」から「目的→計画→成果物」へ</strong>の移行を志向</li>
+      <li>デスクトップやクラウド業務環境を<strong>エージェントの作業場</strong>として開放</li>
+      <li>人間を<strong>承認者・監督者</strong>として位置づけ</li>
+      <li><strong>監査可能性と安全性</strong>を最初から組み込む</li>
+    </ul>
+
+    <div class="callout success">
+      <div class="callout-icon">★</div>
+      <div class="callout-body">
+        <strong>時代の転換</strong>
+        2026年のAI市場は、「どのチャットボットが賢いか」を競う時代から、「どの同僚を雇うか」を選ぶ時代へと、静かに、しかし確実に舵を切った。
+      </div>
+    </div>
+  </article>
+
+  <nav class="chapter-nav">
+    <a class="prev" href="14.html"><span class="dir">← PREV</span><span class="label">第14章:<br>限界と実用のコツ</span></a>
+    <a class="next" href="16.html"><span class="dir">NEXT →</span><span class="label">第16章:<br>後半以降の展望</span></a>
+  </nav>
+
+  <a class="home-btn" href="../index.html">目次に戻る</a>
+
+  <footer class="footer"><span class="brand">COWORK 2026</span>APRIL 19, 2026 · MOBILE EDITION</footer>
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg><span>ホーム</span></a>
+  <a href="../timeline.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>年表</span></a>
+  <a href="../players.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>製品</span></a>
+  <a href="../glossary.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span>用語</span></a>
+  <a href="15.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span>読む</span></a>
+</nav>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

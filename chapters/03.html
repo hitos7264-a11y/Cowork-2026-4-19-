@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#07080c">
+<script>(function(){var k='cowork-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark')t='dark';document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f4f6fb':'#07080c');})();</script>
+<title>第3章 Claude Coworkの実務シナリオ | Cowork 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a href="../index.html" class="back-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>目次</a>
+    <div class="topbar-logo"><div class="logo-mark">C</div></div>
+    <div class="topbar-right">
+      <button type="button" class="theme-toggle" aria-label="テーマを切り替え">
+        <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m13.66-13.66 1.41 1.41"/></svg>
+        <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <div class="topbar-meta"><span class="date">CH. 03</span></div>
+    </div>
+  </header>
+
+  <section class="article-hero theme-mint">
+    <div class="chapter-badge">CHAPTER 03 · USE CASES</div>
+    <h1 class="article-title">何ができるのか<br>── Claude Coworkの<br><span style="background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">実務シナリオ</span></h1>
+    <div class="article-lead">
+      Anthropic自身が公式ページで強調しているClaude Coworkの主要ユースケースは、大きく四つに集約できる。
+    </div>
+  </section>
+
+  <article class="article-body">
+    <h2>4つの主要ユースケース</h2>
+
+    <ul class="feature-list">
+      <li data-n="1"><strong>ローカルファイルの整理・管理</strong>ドラフト、ダウンロード、添付ファイルが雑然と溜まったフォルダにClaudeを向けて、リネーム、分類、重複削除、必要なファイルの抽出を依頼する使い方である。</li>
+      <li data-n="2"><strong>ソースファイルからのドキュメント準備</strong>レポート執筆の本当に難しい部分──情報の収集と組み立て──をAIが引き受け、ユーザーには「仕上げの判断」という創造的な部分だけが残る。</li>
+      <li data-n="3"><strong>複雑なリサーチの統合</strong>質問と一連のソースを渡せば、Claudeが横断的に読み込み、関連性の高い情報を抽出した要約をレビュー用に返してくる。</li>
+      <li data-n="4"><strong>非構造データからのデータ抽出</strong>契約書、レポート、記録といった密度の高い文書を読み解き、構造化された表形式で必要情報を取り出してくれる。</li>
+    </ul>
+
+    <h2>具体例 ── Allie K. Millerの実践</h2>
+
+    <p>Forbes誌に掲載されたAIインフルエンサーAllie K. Miller氏の実践例では、彼女はClaude Coworkに<strong>321本のポッドキャスト書き起こし</strong>を読み込ませ、ゲスト全員を職種別に分類し、AIに対する感情を「慎重」から「強気」までランク付けし、各人から注目すべき発言を引用として抽出するという作業を任せている。</p>
+
+    <p>別スレッドではマンハッタンのポッドキャストスタジオを検索し、比較表を作り、予約フォームを自動で埋めていくといった<em>「リサーチから予約作業まで」の一気通貫</em>も任せている。</p>
+
+    <div class="pull-quote">
+      Miller氏は複数のスレッドを並行稼働させ、一人のユーザーが同時に複数のAI同僚を走らせる使い方を紹介している。
+    </div>
+
+    <h2>Wiredによる実地レビュー</h2>
+
+    <div class="callout">
+      <div class="callout-icon">W</div>
+      <div class="callout-body">
+        <strong>雑な指示がそのまま機能する</strong>
+        「このPDFが大きすぎるので小さくして」「これらの20枚のJPEGを一つのPDFにまとめて」「これらについて全部まとめたレポートを作って」──いかにも雑に人間の同僚に頼みそうな指示が、そのまま機能する。
+      </div>
+    </div>
+
+    <p>Anthropicは<em>「チャットのような一問一答ではなく、同僚にメッセージを残しておくような使い方」</em>と形容しており、この比喩が製品の性格を端的に表している。</p>
+
+    <h2>決済の線引き ── どこまで任せるか</h2>
+
+    <p>Wiredは、Claude Coworkが夜9時のAlamo Drafthouseの上映回を見つけたうえで、<strong>安全対策としてチケット購入までは踏み込まなかった例</strong>を紹介している。決済を伴う最終アクションについては当時なお慎重な線引きが残っていたことを率直に報じている。</p>
+
+    <div class="callout warn">
+      <div class="callout-icon">!</div>
+      <div class="callout-body">
+        <strong>AI Cowork時代の真の設計課題</strong>
+        こうした「どこまで任せるか」の境界設計こそが、各社が2026年を通じて磨き続けているポイントである。
+      </div>
+    </div>
+  </article>
+
+  <nav class="chapter-nav">
+    <a class="prev" href="02.html"><span class="dir">← PREV</span><span class="label">第2章:<br>Claude Cowork</span></a>
+    <a class="next" href="04.html"><span class="dir">NEXT →</span><span class="label">第4章:<br>技術アーキテクチャ</span></a>
+  </nav>
+
+  <a class="home-btn" href="../index.html">目次に戻る</a>
+
+  <footer class="footer"><span class="brand">COWORK 2026</span>APRIL 19, 2026 · MOBILE EDITION</footer>
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg><span>ホーム</span></a>
+  <a href="../timeline.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>年表</span></a>
+  <a href="../players.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>製品</span></a>
+  <a href="../glossary.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span>用語</span></a>
+  <a href="03.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span>読む</span></a>
+</nav>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

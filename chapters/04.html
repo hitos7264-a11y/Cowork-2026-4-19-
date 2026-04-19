@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#07080c">
+<script>(function(){var k='cowork-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark')t='dark';document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f4f6fb':'#07080c');})();</script>
+<title>第4章 技術アーキテクチャ | Cowork 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a href="../index.html" class="back-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>目次</a>
+    <div class="topbar-logo"><div class="logo-mark">C</div></div>
+    <div class="topbar-right">
+      <button type="button" class="theme-toggle" aria-label="テーマを切り替え">
+        <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m13.66-13.66 1.41 1.41"/></svg>
+        <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <div class="topbar-meta"><span class="date">CH. 04</span></div>
+    </div>
+  </header>
+
+  <section class="article-hero theme-cyan">
+    <div class="chapter-badge">CHAPTER 04 · ARCHITECTURE</div>
+    <h1 class="article-title">技術アーキテクチャ<br>── ハイブリッドクラウド<br>+ <span style="background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">ローカル仮想マシン</span></h1>
+    <div class="article-lead">
+      Claude Coworkを技術的に面白くしているのは、「すべてをクラウドに送る」でも「すべてをローカルで処理する」でもない、ハイブリッドなアーキテクチャである。
+    </div>
+  </section>
+
+  <article class="article-body">
+    <h2>頭脳はクラウド、手足はローカル</h2>
+
+    <div class="kv-list">
+      <div class="kv-row"><div class="k">Brain</div><div class="v">Anthropicクラウドのモデルが推論・計画を担当</div></div>
+      <div class="kv-row"><div class="k">Limbs</div><div class="v">ユーザーMac内の極小Linux VMが実行を担当</div></div>
+      <div class="kv-row"><div class="k">Isolation</div><div class="v">Apple Virtualization Framework で隔離</div></div>
+      <div class="kv-row"><div class="k">Access</div><div class="v">明示的にマウントされたフォルダのみ</div></div>
+    </div>
+
+    <p>Coworkの「頭脳」にあたる推論・計画機能はAnthropicのクラウド上のモデルが担い、「手足」にあたる実行環境は<strong>ユーザーのMac内に用意された極小のLinux仮想マシン</strong>が担う、という構造になっている。</p>
+
+    <p>この仮想マシンはAppleのVirtualization Frameworkを使って隔離されており、<em>明示的にマウントされたフォルダだけにアクセスでき、それ以外のユーザー領域からは原理的に隔絶されている</em>。クラウドで生成されたプランやコマンドが、このVMの中で安全に実行され、その結果がクラウドに戻ってまた次の一歩が計画される、という<strong>往復運動でタスクが進む</strong>仕組みだ。</p>
+
+    <h2>セキュリティと性能の両立</h2>
+
+    <div class="pull-quote">
+      ローカルでコードやシェルコマンドを走らせられるから応答は速く、モデル本体がOSに触れないから被害を局所化しやすい。
+    </div>
+
+    <p>この「頭脳はクラウド、手足はローカル」の分離は、<strong>セキュリティと性能の両立</strong>という観点で非常に巧妙な解になっている。ブラウザ操作も含めた幅広いタスクに対応でき、万一プロンプトインジェクションで意図しない動きが発生しても被害を局所化しやすい。</p>
+
+    <div class="callout">
+      <div class="callout-icon">W</div>
+      <div class="callout-body">
+        <strong>Cherny氏(Wired)</strong>
+        「仮想化によって、ツールが特定の要求されたファイルにしかアクセスできないようにしている」──この設計は高く評価されている。
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <div class="callout-icon">!</div>
+      <div class="callout-body">
+        <strong>オフラインではない</strong>
+        なおCowork利用にはインターネット接続が必須で、「ローカルで完結しきるオフラインエージェント」ではない点は明記しておきたい。
+      </div>
+    </div>
+
+    <h2>Microsoft Copilot Coworkの場合</h2>
+
+    <p>Microsoft Copilot Coworkも類似の発想を、より企業向けに振ったアーキテクチャで実装している。こちらは<strong>「サンドボックス化された保護付きクラウド環境」</strong>の中でタスクを走らせ、ユーザーがデバイスを切り替えても処理が継続される<em>「耐久性のある実行基盤」</em>として設計されている。</p>
+
+    <p>Microsoft 365のアイデンティティ、権限、コンプライアンスポリシーがデフォルトで適用され、すべてのアクションとアウトプットが監査可能なログに残る。技術面では<strong>MicrosoftがAnthropicと密に連携</strong>し、Claude Coworkを支える技術をMicrosoft 365 Copilotに統合したと明言している。</p>
+
+    <p>同時に、特定のベンダーモデルに縛られず、タスクごとに最適なモデルを選ぶ<em>「マルチモデル優位」</em>戦略を掲げており、今後も新しいモデルが出てくるたびにその能力を迅速に取り込める構造を強調している。</p>
+  </article>
+
+  <nav class="chapter-nav">
+    <a class="prev" href="03.html"><span class="dir">← PREV</span><span class="label">第3章:<br>実務シナリオ</span></a>
+    <a class="next" href="05.html"><span class="dir">NEXT →</span><span class="label">第5章:<br>Copilot Cowork</span></a>
+  </nav>
+
+  <a class="home-btn" href="../index.html">目次に戻る</a>
+
+  <footer class="footer"><span class="brand">COWORK 2026</span>APRIL 19, 2026 · MOBILE EDITION</footer>
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg><span>ホーム</span></a>
+  <a href="../timeline.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>年表</span></a>
+  <a href="../players.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>製品</span></a>
+  <a href="../glossary.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span>用語</span></a>
+  <a href="04.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span>読む</span></a>
+</nav>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

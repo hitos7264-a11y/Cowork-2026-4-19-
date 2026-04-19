@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#07080c">
+<script>(function(){var k='cowork-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark')t='dark';document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f4f6fb':'#07080c');})();</script>
+<title>第10章 4月の大型アップデート | Cowork 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a href="../index.html" class="back-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>目次</a>
+    <div class="topbar-logo"><div class="logo-mark">C</div></div>
+    <div class="topbar-right">
+      <button type="button" class="theme-toggle" aria-label="テーマを切り替え">
+        <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m13.66-13.66 1.41 1.41"/></svg>
+        <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <div class="topbar-meta"><span class="date">CH. 10</span></div>
+    </div>
+  </header>
+
+  <section class="article-hero theme-amber">
+    <div class="chapter-badge">CHAPTER 10 · APRIL UPDATE</div>
+    <h1 class="article-title">4月の大型アップデート<br>── Claude Cowork<br><span style="background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">エンタープライズGA</span></h1>
+    <div class="article-lead">
+      2026年4月19日時点で最も影響が大きく最新性のあるニュースは、Anthropicが4月10日付けで発表した「Claude Coworkエンタープライズ対応の一般提供」である。
+    </div>
+  </section>
+
+  <article class="article-body">
+    <h2>Windows対応 ── 導入可能企業が数倍に</h2>
+
+    <div class="kv-list">
+      <div class="kv-row"><div class="k">Date</div><div class="v">2026年4月10日</div></div>
+      <div class="kv-row"><div class="k">Status</div><div class="v">General Availability (GA)</div></div>
+      <div class="kv-row"><div class="k">Platform</div><div class="v">macOS + Windows</div></div>
+      <div class="kv-row"><div class="k">Plans</div><div class="v">すべての有償プラン</div></div>
+    </div>
+
+    <div class="callout success">
+      <div class="callout-icon">★</div>
+      <div class="callout-body">
+        <strong>Windows対応の意義</strong>
+        ローンチ当初はmacOS限定だったことを思えば、導入可能な企業の規模は一気に数倍に広がったといえる。
+      </div>
+    </div>
+
+    <h2>エンタープライズ管理機能の充実</h2>
+
+    <ul class="feature-list">
+      <li data-n="1"><strong>RBAC（ロールベースアクセス制御）</strong>Enterpriseプラン上でユーザーをグループ化し（手動またはSCIMを用いたIdPからの同期）、各グループにカスタムロールを割り当て、「このチームはCowork使用可、こちらは不可」といった細かい制御ができる。</li>
+      <li data-n="2"><strong>Spend Limits</strong>グループ単位での支出上限を管理コンソールから設定可能。「どの部門がいくら使うか」という予算管理を現実的に運用できる。</li>
+      <li data-n="3"><strong>Analytics API</strong>DAU／WAU／MAU、各ユーザーのセッション数、スキル・コネクター呼び出し状況まで可視化。</li>
+      <li data-n="4"><strong>OpenTelemetry拡張</strong>ツール呼び出し、コネクター呼び出し、ファイル読み書き、スキル利用、AI発動アクション（手動/自動承認）がイベントとして吐き出され、Splunk/CriblなどのSIEMパイプラインに流せる。</li>
+    </ul>
+
+    <div class="pull-quote">
+      「AIの行動を、企業のセキュリティ運用の中に組み込める」という、非常に大きな一歩。
+    </div>
+
+    <h2>Zoom公式MCPコネクター登場</h2>
+
+    <p>併せて、Zoomが公式MCPコネクターをリリースし、<strong>Zoom会議の要約、アクションアイテム、トランスクリプト、スマートレコーディングがそのままCoworkの中に流れ込む</strong>ようになった。Claude Coworkは、これを足場にZoom会議の内容をタスクに変換してワークフローを回す、という典型的な<em>「会議→行動」のブリッジ</em>を簡単に作れるようになる。</p>
+
+    <p>コネクターごとのアクション制御（読み取りは許可、書き込みは禁止、のような細粒度制御）も可能になり、<strong>ガバナンスの粒度は大幅に上がった</strong>。</p>
+
+    <h2>導入企業の具体例</h2>
+
+    <div class="callout pink">
+      <div class="callout-icon">Z</div>
+      <div class="callout-body">
+        <strong>Zapier</strong>
+        エンジニアリングのボトルネックを可視化するダッシュボードを組み立て。
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-icon">J</div>
+      <div class="callout-body">
+        <strong>Jamf</strong>
+        IT資産管理の7項目評価を45分のセルフ評価ワークフローに変換。
+      </div>
+    </div>
+
+    <div class="callout success">
+      <div class="callout-icon">A</div>
+      <div class="callout-body">
+        <strong>Airtree（VC）</strong>
+        投資先のDrive、Slack、競合ニュースから自動でボード資料を作るワークフローを構築。
+      </div>
+    </div>
+  </article>
+
+  <nav class="chapter-nav">
+    <a class="prev" href="09.html"><span class="dir">← PREV</span><span class="label">第9章:<br>OSS陣営</span></a>
+    <a class="next" href="11.html"><span class="dir">NEXT →</span><span class="label">第11章:<br>法務プラグイン</span></a>
+  </nav>
+
+  <a class="home-btn" href="../index.html">目次に戻る</a>
+
+  <footer class="footer"><span class="brand">COWORK 2026</span>APRIL 19, 2026 · MOBILE EDITION</footer>
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg><span>ホーム</span></a>
+  <a href="../timeline.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>年表</span></a>
+  <a href="../players.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>製品</span></a>
+  <a href="../glossary.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span>用語</span></a>
+  <a href="10.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span>読む</span></a>
+</nav>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

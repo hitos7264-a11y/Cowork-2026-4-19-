@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#07080c">
+<script>(function(){var k='cowork-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark')t='dark';document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f4f6fb':'#07080c');})();</script>
+<title>第7章 Abacus AI CoWork | Cowork 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a href="../index.html" class="back-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>目次</a>
+    <div class="topbar-logo"><div class="logo-mark">C</div></div>
+    <div class="topbar-right">
+      <button type="button" class="theme-toggle" aria-label="テーマを切り替え">
+        <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m13.66-13.66 1.41 1.41"/></svg>
+        <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <div class="topbar-meta"><span class="date">CH. 07</span></div>
+    </div>
+  </header>
+
+  <section class="article-hero theme-amber">
+    <div class="chapter-badge">CHAPTER 07 · ABACUS</div>
+    <h1 class="article-title">Abacus AI CoWork<br>── マルチモデルを<br><span style="background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">自動ルーティング</span></h1>
+    <div class="article-lead">
+      2026年にはAnthropic以外のベンダーからも「Cowork」系製品が相次いで登場した。その中で技術的に注目されているのがAbacus AIのデスクトップ製品「Abacus CoWork」である。
+    </div>
+  </section>
+
+  <article class="article-body">
+    <h2>OS非依存という決定的な差</h2>
+
+    <p>Abacus CoWorkは、同社の既存プロダクトである<strong>「Abacus AI Agent」のエージェント能力を、コーディング領域から一般のナレッジワーク領域に拡張</strong>したモードとして位置付けられており、<em>macOSだけでなくWindows、Linuxにも対応している</em>のが大きな特徴だ。</p>
+
+    <div class="callout success">
+      <div class="callout-icon">✓</div>
+      <div class="callout-body">
+        <strong>Mac限定のClaude Coworkと対比</strong>
+        Abacus側はハード依存を最初から解消しているため、WindowsやLinuxを使う企業もすぐに導入できる。
+      </div>
+    </div>
+
+    <h2>マルチモデル・マルチエージェントの徹底</h2>
+
+    <p>Abacus CoWorkの設計上の売りは、<strong>「マルチモデル・マルチエージェント」の徹底</strong>である。ユーザーは同じCoWorkの中から、複数のトップモデルを選べ、タスクの特性に合わせて自動ルーティングされる。</p>
+
+    <div class="kv-list">
+      <div class="kv-row"><div class="k">Models</div><div class="v">Abacus AI Agent / Sonnet-4.5 / Opus-4.5 / GPT-5.1 Codex</div></div>
+      <div class="kv-row"><div class="k">Subtask</div><div class="v">複雑なタスクは自動分解→サブエージェント並列実行</div></div>
+      <div class="kv-row"><div class="k">Output</div><div class="v">動作するExcel / Word / PowerPoint / PDF</div></div>
+      <div class="kv-row"><div class="k">Schedule</div><div class="v">長時間稼働・スケジュール実行対応</div></div>
+    </div>
+
+    <div class="pull-quote">
+      成果物は、そのまま実務で編集可能な形で返ってくる。
+    </div>
+
+    <p>複雑なタスクは自動的にサブタスクに分解され、サブエージェント群が並列に実行される。<em>「毎週月曜の朝にこの分析を回す」</em>のような定期的な自動運用にも向く。</p>
+
+    <h2>ブラウザ統合とバンドル戦略</h2>
+
+    <p>ブラウザ統合により、<strong>ローカルファイル操作とWeb操作を一つのワークフローの中でシームレスに組み合わせられる</strong>点も、同時期の類似製品と足並みを揃えている。</p>
+
+    <div class="callout pink">
+      <div class="callout-icon">$</div>
+      <div class="callout-body">
+        <strong>低い導入障壁</strong>
+        ChatLLMや同社のDeep Agentと無料でバンドル提供されるため、既存のAbacus契約者が追加コストなしで触り始められる。
+      </div>
+    </div>
+  </article>
+
+  <nav class="chapter-nav">
+    <a class="prev" href="06.html"><span class="dir">← PREV</span><span class="label">第6章:<br>マネーフォワード</span></a>
+    <a class="next" href="08.html"><span class="dir">NEXT →</span><span class="label">第8章:<br>Coworker AI</span></a>
+  </nav>
+
+  <a class="home-btn" href="../index.html">目次に戻る</a>
+
+  <footer class="footer"><span class="brand">COWORK 2026</span>APRIL 19, 2026 · MOBILE EDITION</footer>
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg><span>ホーム</span></a>
+  <a href="../timeline.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>年表</span></a>
+  <a href="../players.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>製品</span></a>
+  <a href="../glossary.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span>用語</span></a>
+  <a href="07.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span>読む</span></a>
+</nav>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

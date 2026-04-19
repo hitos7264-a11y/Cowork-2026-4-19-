@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#07080c">
+<script>(function(){var k='cowork-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark')t='dark';document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f4f6fb':'#07080c');})();</script>
+<title>用語集 | Cowork 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a href="index.html" class="back-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>ホーム</a>
+    <div class="topbar-logo"><div class="logo-mark">C</div></div>
+    <div class="topbar-right">
+      <button type="button" class="theme-toggle" aria-label="テーマを切り替え">
+        <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m13.66-13.66 1.41 1.41"/></svg>
+        <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <div class="topbar-meta"><span class="date">GLOSSARY</span></div>
+    </div>
+  </header>
+
+  <section class="article-hero theme-mint" style="padding-bottom:16px;">
+    <div class="chapter-badge">📖 GLOSSARY</div>
+    <h1 class="article-title">用語集<br><span style="background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Key Terms</span></h1>
+    <p style="color:var(--text-2);font-size:14px;line-height:1.75;margin-top:12px;">
+      AIコワーク時代を読み解くためのキーワード集。検索で即座に目的の語へ。
+    </p>
+  </section>
+
+  <div class="glossary-search">
+    <input id="glossary-search" type="search" placeholder="用語を検索（例: MCP, DIFM, Work IQ）" autocomplete="off">
+  </div>
+
+  <div class="glossary-list">
+
+    <div class="term">
+      <div class="term-name">AI Cowork<span class="jp">AIコワーク</span></div>
+      <div class="term-def">AIが、あなたの代わりに、デスクトップやクラウド業務環境の上で、複数ステップの実作業を最後まで自律的にやりきる仕組み。「成果物そのものを届ける」点でチャットボットと区別される。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Orchestrator<span class="jp">オーケストレーター</span></div>
+      <div class="term-def">調整役エージェント。ユーザーの意図を解釈し、会計・税務・財務など特化エージェントへタスクを割り振り、並列実行を管理する。マネーフォワード AI Coworkが採用。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Multi-Agent<span class="jp">マルチエージェント</span></div>
+      <div class="term-def">特定の役割を持つ複数のエージェントが並列で協調して働く構成。単一エージェント型の順次処理ボトルネックを解消する、AIコワークの第一の柱。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Human-in-the-Loop<span class="jp">HITL</span></div>
+      <div class="term-def">重要な判断や破壊的操作は必ず人間の承認を通す設計思想。自律性と統制のバランスを保つための仕組み。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Agent Skills<span class="jp">エージェント・スキル</span></div>
+      <div class="term-def">特定業務に特化した手順や知識をテキストリソースとしてパッケージ化したもの。「Plugin」「Connector」と並ぶ、拡張性を担う仕組み。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">MCP<span class="jp">Model Context Protocol</span></div>
+      <div class="term-def">AIエージェントと外部ツール・データを接続するためのプロトコル。マネーフォワード AI CoworkはMCP経由で「マネーフォワード クラウド会計」等と連携する。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Work IQ</div>
+      <div class="term-def">Microsoft Copilot Coworkが備える、Outlookメール・Teamsメッセージ・M365ファイル・Excel・会議録画を横断的に参照して業務文脈を把握する仕組み。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Draft &amp; Approve</div>
+      <div class="term-def">AIが作成したドラフトを人間が最終承認してから確定させるプロセス。マネーフォワード AI Coworkのガバナンス設計の核。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Guardrail<span class="jp">ガードレール</span></div>
+      <div class="term-def">AIが社内ルールに沿って動作するよう制約するメカニズム。暴走や逸脱を防ぐ「柵」。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">RBAC<span class="jp">ロールベースアクセス制御</span></div>
+      <div class="term-def">ユーザーをグループ化し、各グループにカスタムロールを割り当ててアクセスを制御する仕組み。Claude Cowork 4月GAで導入。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">OpenTelemetry</div>
+      <div class="term-def">ツール呼び出し、ファイル読み書き、スキル利用などAIの全アクションをイベントとして吐き出し、Splunk・CriblなどSIEMに流し込むための仕組み。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">SIEM</div>
+      <div class="term-def">Security Information and Event Management。セキュリティ情報イベント管理。Splunk、Criblなどが代表例。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Prompt Injection<span class="jp">プロンプトインジェクション</span></div>
+      <div class="term-def">AIが参照するWebページ・画像・メール・文書に悪意ある指示を混ぜ、AIが正規指示と誤認して実行してしまう攻撃。AIコワークの最大リスク。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">BYOK<span class="jp">Bring Your Own Key</span></div>
+      <div class="term-def">自分のAPIキーを持ち込んで利用する方式。Kuse Coworkなどが採用し、モデル非依存・ローカルファーストを実現する。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">DIY / DIWM / DIFM</div>
+      <div class="term-def">Do It Yourself（自分でやる）／Do It With Me（一緒にやる）／Do It For Me（代わりにやってくれる）。Coworkは本格的にDIFMの領域に到達した。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Task<span class="jp">タスク</span></div>
+      <div class="term-def">Claude Coworkでのセッション単位。従来の「チャット」ではなく、ゴールを持つ作業単位としてセッションが構成される。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">CAMEL-AI</div>
+      <div class="term-def">Eigent AIが主導するオープンソースのマルチエージェントフレームワーク。GitHubで35,000+ stars、200+ contributors。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">CoCEO</div>
+      <div class="term-def">CoWork.comが提供するシニアAI戦略家相当のメタエージェント。他のエージェントにタスクを委譲し、毎日の日次レポートを返す「AI参謀」。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">PlayLoop</div>
+      <div class="term-def">CoWork.com上で実行されるワークフロー単位の呼称。複数プラットフォームのエージェントを組み合わせて回せる。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Playbook<span class="jp">プレイブック</span></div>
+      <div class="term-def">組織独自の業務手順やリスク許容度を記述したドキュメント。法務プラグインなどはプレイブックに沿ってカスタマイズされる。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Connector<span class="jp">コネクター</span></div>
+      <div class="term-def">外部SaaSやツールとエージェントを接続する機能。Zoom公式MCPコネクターなど。Coworker AIは100+コネクターを持つ。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Analytics API</div>
+      <div class="term-def">Claude Cowork 4月GAで提供。DAU/WAU/MAU、各ユーザーのセッション数、スキル・コネクター呼び出し状況を外部に取り出せる。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Spend Limits<span class="jp">支出上限</span></div>
+      <div class="term-def">グループ単位で管理コンソールから設定できる予算上限。部門別の利用管理を可能にする。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Frontier Program</div>
+      <div class="term-def">Microsoftが Copilot Cowork を Research Preview より広範な企業に展開するプログラム。2026年3月末開始。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">J-SOX</div>
+      <div class="term-def">日本版SOX法（金融商品取引法における内部統制報告制度）。マネーフォワード AI Coworkが対応する日本企業のガバナンス要件の核。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">SCIM</div>
+      <div class="term-def">System for Cross-domain Identity Management。IdPからのユーザー同期の標準プロトコル。Claude CoworkのRBACで利用可能。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Apple Virtualization Framework</div>
+      <div class="term-def">macOS上で仮想マシンを作成・実行するためのApple公式フレームワーク。Claude Coworkの「手足」側のVM隔離に使用されている。</div>
+    </div>
+
+    <div class="term">
+      <div class="term-name">Claude Agent SDK</div>
+      <div class="term-def">Anthropic公式のエージェント開発キット。マネーフォワード AI Coworkの技術基盤として採用されている。</div>
+    </div>
+
+  </div>
+
+  <a class="home-btn" href="index.html">ホームに戻る</a>
+
+  <footer class="footer"><span class="brand">COWORK 2026</span>APRIL 19, 2026 · MOBILE EDITION</footer>
+</div>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg><span>ホーム</span></a>
+  <a href="timeline.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>年表</span></a>
+  <a href="players.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>製品</span></a>
+  <a href="glossary.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span>用語</span></a>
+  <a href="chapters/00-intro.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span>読む</span></a>
+</nav>
+
+<script src="js/main.js"></script>
+</body>
+</html>

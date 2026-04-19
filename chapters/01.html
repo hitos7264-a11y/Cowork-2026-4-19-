@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#07080c">
+<script>(function(){var k='cowork-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark')t='dark';document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f4f6fb':'#07080c');})();</script>
+<title>第1章 Coworkが指すもの | Cowork 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a href="../index.html" class="back-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      目次
+    </a>
+    <div class="topbar-logo"><div class="logo-mark">C</div></div>
+    <div class="topbar-right">
+      <button type="button" class="theme-toggle" aria-label="テーマを切り替え">
+        <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m13.66-13.66 1.41 1.41"/></svg>
+        <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <div class="topbar-meta"><span class="date">CH. 01</span></div>
+    </div>
+  </header>
+
+  <section class="article-hero theme-violet">
+    <div class="chapter-badge">CHAPTER 01 · ARCHITECTURE</div>
+    <h1 class="article-title">「Cowork」が指すもの<br>── 単なる新語ではなく、<br>新しい<span style="background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">アーキテクチャ</span></h1>
+    <div class="article-lead">
+      AIコワークは、単なる新しい呼び名ではない。新しいアーキテクチャ、新しいユーザー体験、そして人間とAIの新しい関係性を指す言葉である、という見解がEigent AIなど一次情報を発信する企業側から明確に提示されている。
+    </div>
+  </section>
+
+  <article class="article-body">
+    <p>従来の多くのAIエージェントは<strong>「単一エージェントが、一つのタスクを、一つのスレッドで、順番に処理する」単一エージェント型</strong>だった。どれほど賢くなっても、このモデルには順次処理というボトルネックが残り、複雑な業務を扱おうとすると待ち時間が嵩む。</p>
+
+    <p>AIコワークはここに「協調」の概念を持ち込み、<strong>複数の専門エージェントをチームとして働かせ、オーケストレーター（調整役エージェント）がワークフローを管理する構造</strong>を標準的な設計思想に据えた。</p>
+
+    <h2>AIコワーク、五つの柱</h2>
+
+    <p>AIコワークのカテゴリを定義している柱は、主に五つに整理できる。</p>
+
+    <ul class="feature-list">
+      <li data-n="1"><strong>マルチエージェント協調</strong>特定の役割を持った複数のエージェントが並列で働く。</li>
+      <li data-n="2"><strong>デスクトップネイティブ</strong>従来のチャットUIに閉じこめられるのではなく、ユーザーの実際のPC環境──フォルダ、ローカルファイル、ブラウザ、各種業務アプリ──を作業場として直接操作する。</li>
+      <li data-n="3"><strong>ヒューマン・イン・ザ・ループ</strong>重要な判断や破壊的操作は必ず人間の承認を通す設計を取り、自律性と統制のバランスを保つ。</li>
+      <li data-n="4"><strong>スキルと拡張性</strong>特定業務に特化した手順や知識を「Agent Skills」「Plugins」「Connector」という形で追加・共有できる。</li>
+      <li data-n="5"><strong>モデル独立性</strong>単一ベンダーのモデルに縛られず、Claude、GPT、Gemini、Llama、ローカルモデルなどを適材適所で使い分けられる方向に向かっている。</li>
+    </ul>
+
+    <p>この五つを押さえれば、個別の製品名に惑わされず、AIコワーク全体の骨格を理解できる。</p>
+
+    <h2>本質的な変化 ── インタラクションモデルの転換</h2>
+
+    <div class="pull-quote">
+      「プロンプト → 応答」から、「目的 → 実行計画 → 結果」へ。
+    </div>
+
+    <p>設計思想として最も本質的な変化は、このインタラクションモデルの移行である。ユーザーは<strong>完成形のゴールだけを伝え</strong>、その間にある計画立案・ツール切替・ファイル操作・Web検索・下書き・整形・保存といったすべての中間作業をAIが引き受ける。</p>
+
+    <p>私たちが「Aの作業やっといて」と同僚に頼む感覚に極めて近い。だからこそAnthropicはこの新モードを<em>「Claude Code for the rest of your work（開発以外の仕事のためのClaude Code）」</em>、つまり非エンジニア向けに作り直した汎用エージェントとして打ち出したわけだ。</p>
+
+    <div class="callout pink">
+      <div class="callout-icon">◉</div>
+      <div class="callout-body">
+        <strong>カテゴリの理論的支柱</strong>
+        「新しいアーキテクチャ、新しいUX、新しい人間–AIの関係である」──Eigent AIが発する定義は、AIコワーク業界全体で繰り返し引用されている。
+      </div>
+    </div>
+  </article>
+
+  <nav class="chapter-nav">
+    <a class="prev" href="00-intro.html">
+      <span class="dir">← PREV</span>
+      <span class="label">はじめに</span>
+    </a>
+    <a class="next" href="02.html">
+      <span class="dir">NEXT →</span>
+      <span class="label">第2章:<br>Claude Cowork</span>
+    </a>
+  </nav>
+
+  <a class="home-btn" href="../index.html">目次に戻る</a>
+
+  <footer class="footer"><span class="brand">COWORK 2026</span>APRIL 19, 2026 · MOBILE EDITION</footer>
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg><span>ホーム</span></a>
+  <a href="../timeline.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>年表</span></a>
+  <a href="../players.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>製品</span></a>
+  <a href="../glossary.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span>用語</span></a>
+  <a href="01.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span>読む</span></a>
+</nav>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

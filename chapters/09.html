@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#07080c">
+<script>(function(){var k='cowork-theme',t=localStorage.getItem(k);if(t!=='light'&&t!=='dark')t='dark';document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f4f6fb':'#07080c');})();</script>
+<title>第9章 オープンソース陣営 | Cowork 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a href="../index.html" class="back-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>目次</a>
+    <div class="topbar-logo"><div class="logo-mark">C</div></div>
+    <div class="topbar-right">
+      <button type="button" class="theme-toggle" aria-label="テーマを切り替え">
+        <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m13.66-13.66 1.41 1.41"/></svg>
+        <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <div class="topbar-meta"><span class="date">CH. 09</span></div>
+    </div>
+  </header>
+
+  <section class="article-hero theme-mint">
+    <div class="chapter-badge">CHAPTER 09 · OPEN SOURCE</div>
+    <h1 class="article-title">オープンソース陣営<br>── <span style="background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Eigent / Kuse / OpenClaw</span></h1>
+    <div class="article-lead">
+      商用のCoworkが盛り上がる一方で、同じ思想を「誰でも使える形で解放する」オープンソース陣営も並行して育っている。
+    </div>
+  </section>
+
+  <article class="article-body">
+    <h2>Eigent AI ── カテゴリの理論的支柱</h2>
+
+    <p>Eigent AIは、<strong>「エンドツーエンドで実際の仕事を終わらせるAIコワーカーシステム」</strong>を掲げるスタートアップで、同社が主導するオープンソースのマルチエージェントフレームワーク「CAMEL-AI」はGitHubで<em>35,000を超えるスターと200人以上のコントリビューター</em>を集めている。</p>
+
+    <div class="kv-list">
+      <div class="kv-row"><div class="k">Core</div><div class="v">CAMEL-AI (OSS) / 35k+ stars</div></div>
+      <div class="kv-row"><div class="k">Product</div><div class="v">Eigent (デスクトップAIエージェント)</div></div>
+      <div class="kv-row"><div class="k">Target</div><div class="v">ERP/CRM操作、ブラウザ自動化、ビジネスレポート生成</div></div>
+      <div class="kv-row"><div class="k">Revenue</div><div class="v">ローンチ3ヶ月未満で $250,000+ 売上</div></div>
+    </div>
+
+    <div class="pull-quote">
+      AI Coworkとは、新しいアーキテクチャ、新しいUX、新しい人間–AIの関係である。── カテゴリの理論的支柱として各所で引用。
+    </div>
+
+    <h2>Kuse Cowork ── オープン・モデル非依存・ローカルファースト</h2>
+
+    <p>Kuse Coworkは、Claude Coworkの思想を<strong>「オープンソース」「モデル非依存」「ローカルファースト」</strong>で再実装するアプローチを取る。</p>
+
+    <ul class="feature-list">
+      <li data-n="1"><strong>クロスプラットフォーム</strong>Windows、macOS、Linuxに対応。</li>
+      <li data-n="2"><strong>BYOK（Bring Your Own Key）</strong>自分の鍵を持ち込んでClaude、GPT、Gemini、ローカルモデルを利用できる。</li>
+      <li data-n="3"><strong>Dockerによる隔離</strong>セキュアな隔離環境を採用し、プロダクション利用を視野に入れた設計。</li>
+    </ul>
+
+    <h2>OpenClaw ── 実験的・研究者向け</h2>
+
+    <div class="callout">
+      <div class="callout-icon">{ }</div>
+      <div class="callout-body">
+        <strong>コミュニティ主導</strong>
+        OpenClawは、開発者がプロトタイピングしたりエージェントアーキテクチャを研究したりするためのフレームワーク色が濃い。商用の洗練さでは劣るが、発想そのものを自由に弄れる環境として、研究者や上級開発者に支持されている。
+      </div>
+    </div>
+
+    <h2>AIコワークの地図</h2>
+
+    <p>AIコワークの地図のなかでは、</p>
+
+    <ul class="bullet-list">
+      <li><strong>北</strong>: Claude Cowork / Copilot Cowork</li>
+      <li><strong>中央</strong>: Abacus CoWork や商用プラットフォーム群</li>
+      <li><strong>南</strong>: Eigent などオープンソース</li>
+    </ul>
+
+    <p>が並び、それぞれが異なる軸で<em>「AIを同僚化する」という同じ目的</em>を追っている。</p>
+  </article>
+
+  <nav class="chapter-nav">
+    <a class="prev" href="08.html"><span class="dir">← PREV</span><span class="label">第8章:<br>Coworker AI</span></a>
+    <a class="next" href="10.html"><span class="dir">NEXT →</span><span class="label">第10章:<br>4月の大型UPDATE</span></a>
+  </nav>
+
+  <a class="home-btn" href="../index.html">目次に戻る</a>
+
+  <footer class="footer"><span class="brand">COWORK 2026</span>APRIL 19, 2026 · MOBILE EDITION</footer>
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg><span>ホーム</span></a>
+  <a href="../timeline.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>年表</span></a>
+  <a href="../players.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>製品</span></a>
+  <a href="../glossary.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span>用語</span></a>
+  <a href="09.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span>読む</span></a>
+</nav>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
